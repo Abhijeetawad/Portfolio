@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  nav {
+    position: sticky;
+    top: 0;
+    background: #000;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #ffcc70;
+  }
+  
+  header {
+    padding: 60px 20px 30px;
+    background: linear-gradient(to right, #1c92d2, #f2fcfe);
+    text-align: center;
+  }
+  
+  .header-container h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .section {
+    padding: 60px 20px;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+  }
+  
+  .section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+  }
+  
+  .skills-list li {
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    background: #f1f1f1;
+    border-radius: 20px;
+  }
+  
+  .progress {
+    margin: 20px 0;
+    background: #eee;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    padding: 8px 12px;
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: left;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  ul li {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  ul li strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  input, textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 12px;
+    background: #6a11cb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: #2575fc;
+  }
+  
+  footer {
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abhijeet Awad | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .section {
+      opacity: 0;
+      transform: translateX(-100px);
+      transition: all 1.5s ease;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="container header-container">
+      <h1>Abhijeet Awad</h1>
+      <p>Associate Software Engineer | Java | Manual Testing | Automation Testing | AWS | DevOps</p>
+    </div>
+  </header>
+
+  <section id="about" class="section" style="background: linear-gradient(to right, #ffecd2, #fcb69f);">
+    <div class="container">
+      <img src="assets/profile.png" alt="Abhijeet's Photo" class="profile-pic"/>
+      <h2>About Me</h2>
+      <p>I am a passionate software engineer with a strong foundation in Python and Java. I have hands-on experience with cloud platforms like AWS and DevOps tools including Jenkins, Git, Docker, and Kubernetes. I enjoy solving real-world problems and building scalable systems.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="section" style="background: linear-gradient(to right, #d9a7c7, #fffcdc);">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li><i class="fab fa-python"></i> Python</li>
+        <li><i class="fab fa-java"></i> Java</li>
+        <li><i class="fab fa-aws"></i> AWS</li>
+        <li><i class="fab fa-docker"></i> Docker</li>
+        <li><i class="fas fa-cogs"></i> Jenkins</li>
+        <li><i class="fab fa-git-alt"></i> Git & GitHub</li>
+        <li><i class="fas fa-network-wired"></i> Kubernetes</li>
+      </ul>
+      <div class="progress">
+        <div class="progress-bar" style="--fill: 90%; width: 90%;">Python</div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar" style="--fill: 80%; width: 80%;">AWS</div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar" style="--fill: 75%; width: 75%;">Docker</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section" style="background: linear-gradient(to right, #a1c4fd, #c2e9fb);">
+    <div class="container">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong><a href="https://github.com/Abhijeetawad/AbhiApp" target="_blank">AbhiApp:</a></strong> A cloud-based app deployed using S3 and GitHub.</li>
+        <li><strong>CI/CD Pipeline:</strong> Built a Jenkins pipeline for automated deployment.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="experience" class="section" style="background: linear-gradient(to right, #fbc2eb, #a6c1ee);">
+    <div class="container">
+      <h2>Experience & Education</h2>
+      <p><strong>Arinoz Technologies</strong> - Associate Software Engineer (Current)</p>
+      <p><strong>Pune Municipal Corporation</strong> - QA Intern (1.6 Year)</p>
+      <p><strong>Bachelor of Engineering (Computer Science)</strong><br/>Zeal College of Engineering and Research, Pune</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section" style="background: linear-gradient(to right, #ffdde1, #ee9ca7);">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form action="mailto:abhijeetawad4@gmail.com" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required/>
+        <input type="email" name="email" placeholder="Your Email" required/>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Abhijeet Awad. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const options = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, options);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
